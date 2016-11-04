@@ -1,0 +1,1 @@
+# apache-redirect-generator-tool
