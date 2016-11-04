@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div class="nav-wrapper"><a class="page-title">Grid</a></div> -->
+        <div class="row">
+            <div class="col">
+            	<h4>Resources for htaccess</h4>
+            	<ul>
+            		<li><a target="_blank" href="https://github.com/h5bp/server-configs-apache/tree/master/src/web_performance">Bolierplate apache optimisations.</a> Consider putting this in your .htaccess too.</li>
+            	</ul>
+    
+                <h4>Apache redirect generator tool.</h4>
+                <p>
+                    After googling for some time how to write a redirect scripts (which I tought are easy) and finding some bad tools that suppoed to help me generate redirect scripts for apache I decided to quickly make my own which will handle query strings.
+                </p>
+                <h5>How to use it:</h5>
+                <p>
+                    Paste old url and how new url should, repeat for all routes.
+                    Copy and paste in your <code>.htaccess</code> file.
+                </p>
+                <div id="rewrite">
+                    <input type="text" v-model="from" placeholder="Url from which to redirect">
+                    <input type="text" v-model="to" placeholder="To url">
+                    <h5>Preview</h5>
+                    <textarea placeholder="preview" v-model="result" cols="130" rows="80" class="materialize-textarea"></textarea>
+                    <button @click="save" class="btn waves-effect waves-light" type="submit" name="action">
+                        Save
+                    </button>
+                    <h5>Output (this goes to .htaccess)</h5>
+                    <textarea v-model="output" cols="130" rows="30" placeholder="This goes to .htaccess" class="materialize-textarea"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
